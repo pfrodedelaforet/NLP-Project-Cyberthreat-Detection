@@ -1,0 +1,26 @@
+2021-02-03 16:35:50,701 INFO    MainThread:13135 [wandb_setup.py:_flush():70] setting env: {}
+2021-02-03 16:35:50,701 INFO    MainThread:13135 [wandb_setup.py:_flush():70] multiprocessing start_methods=fork,spawn,forkserver
+2021-02-03 16:35:50,701 INFO    MainThread:13135 [wandb_setup.py:_flush():70] setting login settings: {}
+2021-02-03 16:35:50,701 INFO    MainThread:13135 [wandb_init.py:_log_setup():318] Logging user logs to /home/pfrod/architectures/wandb/run-20210203_163550-2a2920x1/logs/debug.log
+2021-02-03 16:35:50,701 INFO    MainThread:13135 [wandb_init.py:_log_setup():319] Logging internal logs to /home/pfrod/architectures/wandb/run-20210203_163550-2a2920x1/logs/debug-internal.log
+2021-02-03 16:35:53,479 INFO    MainThread:13135 [wandb_run.py:_console_start():1396] atexit reg
+2021-02-03 16:35:53,480 INFO    MainThread:13135 [wandb_run.py:_redirect():1259] redirect: SettingsConsole.REDIRECT
+2021-02-03 16:35:53,480 INFO    MainThread:13135 [wandb_run.py:_redirect():1264] Redirecting console.
+2021-02-03 16:35:53,480 INFO    MainThread:13135 [redirect.py:install():213] install start
+2021-02-03 16:35:53,481 INFO    MainThread:13135 [redirect.py:install():228] install stop
+2021-02-03 16:35:53,481 INFO    MainThread:13135 [redirect.py:install():213] install start
+2021-02-03 16:35:53,481 INFO    MainThread:13135 [redirect.py:install():228] install stop
+2021-02-03 16:35:53,481 INFO    MainThread:13135 [wandb_run.py:_redirect():1310] Redirects installed.
+2021-02-03 16:42:00,952 ERROR   stderr    :13135 [redirect.py:_pipe_relay():139] problem in pipe relay
+Traceback (most recent call last):
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/wandb/sdk/lib/redirect.py", line 137, in _pipe_relay
+    cb(name, data)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 723, in _console_callback
+    self._backend.interface.publish_output(name, data)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 153, in publish_output
+    self._publish_output(o)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 158, in _publish_output
+    self._publish(rec)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 457, in _publish
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown

@@ -1,0 +1,229 @@
+2021-02-01 15:09:04,769 INFO    MainThread:5825 [internal.py:wandb_internal():64] W&B internal server running at pid: 5825
+2021-02-01 15:09:04,786 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: check_version
+2021-02-01 15:09:04,787 INFO    WriterThread:5825 [datastore.py:open_for_write():77] open: /home/pfrod/architectures/wandb/run-20210201_150901-1sg9vp97/run-1sg9vp97.wandb
+2021-02-01 15:09:04,788 DEBUG   SenderThread:5825 [sender.py:send():117] send: header
+2021-02-01 15:09:04,789 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:09:04,789 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: check_version
+2021-02-01 15:09:04,806 DEBUG   Thread-10 :5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): pypi.org:443
+2021-02-01 15:09:04,975 DEBUG   Thread-10 :5825 [connectionpool.py:_make_request():393] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 53088
+2021-02-01 15:09:05,018 DEBUG   SenderThread:5825 [sender.py:send():117] send: run
+2021-02-01 15:09:05,096 DEBUG   SenderThread:5825 [git.py:repo():33] git repository is invalid
+2021-02-01 15:09:05,113 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:09:05,384 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:09:05,413 INFO    SenderThread:5825 [dir_watcher.py:__init__():165] watching files in: /home/pfrod/architectures/wandb/run-20210201_150901-1sg9vp97/files
+2021-02-01 15:09:05,414 INFO    SenderThread:5825 [sender.py:_start_run_threads():596] run started: 1sg9vp97 with start time 1612188542
+2021-02-01 15:09:05,420 DEBUG   SenderThread:5825 [sender.py:send():117] send: summary
+2021-02-01 15:09:05,421 INFO    SenderThread:5825 [sender.py:_save_file():682] saving file wandb-summary.json with policy end
+2021-02-01 15:09:05,423 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: run_start
+2021-02-01 15:09:06,433 INFO    Thread-14 :5825 [dir_watcher.py:_on_file_created():213] file/dir created: /home/pfrod/architectures/wandb/run-20210201_150901-1sg9vp97/files/wandb-summary.json
+2021-02-01 15:09:06,536 DEBUG   HandlerThread:5825 [tpu_cluster_resolver.py:<module>():36] Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2021-02-01 15:09:07,432 DEBUG   Thread-11 :5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:09:07,848 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:09:08,312 DEBUG   HandlerThread:5825 [meta.py:__init__():34] meta init
+2021-02-01 15:09:08,312 DEBUG   HandlerThread:5825 [meta.py:__init__():48] meta init done
+2021-02-01 15:09:08,313 DEBUG   HandlerThread:5825 [meta.py:probe():190] probe
+2021-02-01 15:09:08,320 DEBUG   HandlerThread:5825 [git.py:repo():33] git repository is invalid
+2021-02-01 15:09:08,321 DEBUG   HandlerThread:5825 [meta.py:_save_pip():52] save pip
+2021-02-01 15:09:08,322 DEBUG   HandlerThread:5825 [meta.py:_save_pip():66] save pip done
+2021-02-01 15:09:08,323 DEBUG   HandlerThread:5825 [meta.py:probe():231] probe done
+2021-02-01 15:09:08,330 DEBUG   SenderThread:5825 [sender.py:send():117] send: files
+2021-02-01 15:09:08,331 INFO    SenderThread:5825 [sender.py:_save_file():682] saving file wandb-metadata.json with policy now
+2021-02-01 15:09:08,350 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:09:08,351 DEBUG   Thread-17 :5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:09:08,351 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:09:08,352 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:09:08,362 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:09:08,421 INFO    Thread-14 :5825 [dir_watcher.py:_on_file_created():213] file/dir created: /home/pfrod/architectures/wandb/run-20210201_150901-1sg9vp97/files/requirements.txt
+2021-02-01 15:09:08,423 INFO    Thread-14 :5825 [dir_watcher.py:_on_file_created():213] file/dir created: /home/pfrod/architectures/wandb/run-20210201_150901-1sg9vp97/files/output.log
+2021-02-01 15:09:08,424 INFO    Thread-14 :5825 [dir_watcher.py:_on_file_created():213] file/dir created: /home/pfrod/architectures/wandb/run-20210201_150901-1sg9vp97/files/wandb-metadata.json
+2021-02-01 15:09:08,701 DEBUG   Thread-17 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:09:08,705 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:09:08,722 DEBUG   Thread-17 :5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2021-02-01 15:09:09,202 DEBUG   Thread-17 :5825 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/pfrodedelaforet/huggingface/1sg9vp97/wandb-metadata.json?Expires=1612274948&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=EM6JQ2pRjNmHkdvhrAIYjDEoSFvxLwCUV69FsisVphq%2F3X%2BMii5zJFaoZsjGjrsk1DE32Vo3XzTOwRasuGUDG%2F1y9tKdLGU1rzPw6uov6cO6qVb7Zx5TWBh9YkbwAHIIbBzP6AFqmsg%2BTsGeUiwSE12qly2A3mcLBqEbZdBSK7Jo1HttZUoOTbbIEcoXh6qLB36CHYllpMAyBTb2QYGUYXMrdjVmPYsR06Zf5dMU9ZTsrJ128RHrbk1Xl3AaItzSNA8oFhmRzz29s2g%2FodM4esD%2FrHgV6iUcQJJpFZciDnhdfYOJTIkcbfVbWFt2VOzB3EdKqua47FEmyN%2FMniF85w%3D%3D HTTP/1.1" 200 0
+2021-02-01 15:09:09,206 INFO    Thread-17 :5825 [upload_job.py:push():133] Uploaded file /tmp/tmp75rb6pncwandb/u49qynyj-wandb-metadata.json
+2021-02-01 15:09:11,806 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:09:12,052 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:09:16,351 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:09:16,541 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:09:20,889 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:09:21,078 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:09:21,436 INFO    Thread-14 :5825 [dir_watcher.py:_on_file_modified():226] file/dir modified: /home/pfrod/architectures/wandb/run-20210201_150901-1sg9vp97/files/output.log
+2021-02-01 15:09:23,461 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:09:23,727 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:09:23,728 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:09:23,729 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:09:23,742 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:09:24,044 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:09:25,432 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:09:25,614 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:09:29,971 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:09:30,185 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:09:34,509 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:09:34,722 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:09:39,048 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:09:39,057 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:09:39,060 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:09:39,060 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:09:39,075 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:09:39,279 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:09:39,372 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:09:43,591 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:09:43,825 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:09:48,132 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:09:48,412 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:09:52,675 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:09:52,992 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:09:54,381 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:09:54,382 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:09:54,383 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:09:54,396 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:09:54,902 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:09:57,224 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:09:57,501 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:10:01,768 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:10:01,982 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:10:06,302 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:10:09,911 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:10:09,913 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:10:09,914 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:10:09,925 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:10:10,126 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:10:10,845 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:10:15,386 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:10:15,572 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:10:19,930 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:10:24,469 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:10:25,137 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:10:25,138 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:10:25,138 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:10:25,153 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:10:25,540 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:10:29,011 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:10:29,220 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:10:33,559 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:10:38,115 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:10:40,551 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:10:40,551 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:10:40,552 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:10:40,563 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:10:40,762 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:10:42,648 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:10:42,820 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:10:47,195 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:10:51,736 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:10:55,770 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:10:55,770 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:10:55,771 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:10:55,781 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:10:55,984 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:10:56,285 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:10:56,468 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:10:57,534 INFO    Thread-14 :5825 [dir_watcher.py:_on_file_modified():226] file/dir modified: /home/pfrod/architectures/wandb/run-20210201_150901-1sg9vp97/files/output.log
+2021-02-01 15:11:00,823 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:11:05,363 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:11:09,911 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:11:10,096 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:11:10,994 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:11:10,995 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:11:10,995 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:11:11,006 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:11:11,327 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:11:14,449 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:11:18,995 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:11:23,537 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:11:23,711 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:11:26,334 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:11:26,334 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:11:26,335 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:11:26,346 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:11:26,546 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:11:28,084 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:11:32,615 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:11:37,155 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:11:37,357 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:11:41,557 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:11:41,558 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:11:41,558 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:11:41,569 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:11:41,766 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:11:41,768 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:11:46,239 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:11:50,772 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:11:50,999 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:11:55,314 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:11:56,772 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:11:56,773 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:11:56,773 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:11:56,783 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:11:56,987 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:11:59,855 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:04,384 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:04,566 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:12:08,931 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:11,998 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:12:11,998 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:12:11,999 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:12:12,013 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:12:12,218 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:12:13,475 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:18,012 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:18,199 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:12:22,549 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:27,086 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:27,225 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:12:27,225 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:12:27,226 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:12:27,241 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:12:27,432 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:12:31,627 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:31,807 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:12:36,167 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:40,707 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:42,439 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:12:42,440 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:12:42,441 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:12:42,452 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:12:42,657 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:12:45,247 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:45,437 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:12:49,786 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:54,326 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:57,666 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:12:57,667 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:12:57,667 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:12:57,681 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:12:57,886 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:12:58,868 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:12:59,070 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:13:03,407 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:13:07,948 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:13:12,492 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:13:12,678 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:13:12,894 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:13:12,894 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:13:12,895 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:13:12,906 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:13:13,223 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:13:17,033 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:13:21,569 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:13:26,108 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:13:26,288 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:13:28,231 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:13:28,231 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:13:28,232 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:13:28,247 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:13:28,454 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:13:30,648 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:13:35,182 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:13:39,715 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:13:39,893 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:13:43,466 DEBUG   HandlerThread:5825 [handler.py:handle_request():55] handle_request: status
+2021-02-01 15:13:43,467 DEBUG   SenderThread:5825 [sender.py:send():117] send: request
+2021-02-01 15:13:43,468 DEBUG   SenderThread:5825 [sender.py:send_request():126] send_request: status
+2021-02-01 15:13:43,481 DEBUG   SenderThread:5825 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-02-01 15:13:43,687 DEBUG   SenderThread:5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-02-01 15:13:44,271 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:13:48,808 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:13:53,352 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats
+2021-02-01 15:13:53,528 DEBUG   Thread-11 :5825 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /files/pfrodedelaforet/huggingface/1sg9vp97/file_stream HTTP/1.1" 200 None
+2021-02-01 15:13:57,891 DEBUG   SenderThread:5825 [sender.py:send():117] send: stats

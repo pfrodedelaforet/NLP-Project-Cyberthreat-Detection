@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/pfrod/architectures/prosenet.py", line 97, in <module>
+    trainer.train()
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer_tf.py", line 457, in train
+    train_ds = self.get_train_tfdataset()
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer_tf.py", line 145, in get_train_tfdataset
+    .shuffle(self.num_train_examples, seed=self.args.seed)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/data/ops/dataset_ops.py", line 1350, in shuffle
+    return ShuffleDataset(self, buffer_size, seed, reshuffle_each_iteration)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/data/ops/dataset_ops.py", line 3836, in __init__
+    **self._flat_structure)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/ops/gen_dataset_ops.py", line 6294, in shuffle_dataset_v3
+    _ops.raise_from_not_ok_status(e, name)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/ops.py", line 6862, in raise_from_not_ok_status
+    six.raise_from(core._status_to_exception(e.code, message), None)
+  File "<string>", line 3, in raise_from
+tensorflow.python.framework.errors_impl.InvalidArgumentError: buffer_size must be greater than zero. [Op:ShuffleDatasetV3]

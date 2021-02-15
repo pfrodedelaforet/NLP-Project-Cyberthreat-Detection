@@ -1,0 +1,40 @@
+2021-02-01 15:09:21.173517: W tensorflow/core/grappler/optimizers/data/auto_shard.cc:656] In AUTO-mode, and switching to DATA-based sharding, instead of FILE-based sharding as we cannot find appropriate reader dataset op(s) to shard. Error: Found an unshardable source dataset: name: "TensorSliceDataset/_2"
+op: "TensorSliceDataset"
+input: "Placeholder/_0"
+input: "Placeholder/_1"
+attr {
+  key: "Toutput_types"
+  value {
+    list {
+      type: DT_INT32
+      type: DT_INT32
+    }
+  }
+}
+attr {
+  key: "output_shapes"
+  value {
+    list {
+      shape {
+        dim {
+          size: 1
+        }
+        dim {
+          size: 512
+        }
+      }
+      shape {
+        dim {
+          size: 1
+        }
+        dim {
+          size: 512
+        }
+      }
+    }
+  }
+}
+
+2021-02-01 15:09:21.284577: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-02-01 15:09:21.285668: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2200000000 Hz
+Tensor("strided_slice:0", shape=(1, 512), dtype=int32)

@@ -1,0 +1,283 @@
+2021-02-03 21:28:33.512551: W tensorflow/core/grappler/optimizers/data/auto_shard.cc:656] In AUTO-mode, and switching to DATA-based sharding, instead of FILE-based sharding as we cannot find appropriate reader dataset op(s) to shard. Error: Found an unshardable source dataset: name: "TensorSliceDataset/_2"
+op: "TensorSliceDataset"
+input: "Placeholder/_0"
+input: "Placeholder/_1"
+attr {
+  key: "Toutput_types"
+  value {
+    list {
+      type: DT_INT32
+      type: DT_INT32
+    }
+  }
+}
+attr {
+  key: "output_shapes"
+  value {
+    list {
+      shape {
+        dim {
+          size: 2048
+        }
+      }
+      shape {
+        dim {
+          size: 2048
+        }
+      }
+    }
+  }
+}
+
+2021-02-03 21:28:33.579128: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-02-03 21:28:33.580076: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2200000000 Hz
+The parameters `output_attentions`, `output_hidden_states` and `use_cache` cannot be updated when calling a model.They have to be set to True/False in the config object (i.e.: `config=XConfig.from_pretrained('name', output_attentions=True)`).
+The parameter `return_dict` cannot be set in graph mode and will always be set to `True`.
+The parameters `output_attentions`, `output_hidden_states` and `use_cache` cannot be updated when calling a model.They have to be set to True/False in the config object (i.e.: `config=XConfig.from_pretrained('name', output_attentions=True)`).
+The parameter `return_dict` cannot be set in graph mode and will always be set to `True`.
+Traceback (most recent call last):
+  File "/home/pfrod/architectures/prosenet_longformer.py", line 215, in <module>
+    trainer.train()
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer_tf.py", line 549, in train
+    self.distributed_training_steps(batch)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 828, in __call__
+    result = self._call(*args, **kwds)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 956, in _call
+    filtered_flat_args)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2941, in __call__
+    filtered_flat_args) = self._maybe_define_function(args, kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3361, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3206, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 990, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 973, in wrapper
+    user_requested=True,
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 459, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "/tmp/tmp808rsxxf.py", line 45, in tf__fn_with_cond
+    retval_ = ag__.converted_call(ag__.ld(control_flow_ops).cond, (ag__.ld(condition), ag__.autograph_artifact((lambda : ag__.converted_call(ag__.ld(self)._stateless_fn, tuple(ag__.ld(inner_args)), dict(**ag__.ld(inner_kwds)), fscope))), ag__.converted_call(ag__.ld(functools).partial, (ag__.ld(self)._concrete_stateful_fn._call_flat, ag__.ld(inner_filtered_flat_args)), dict(captured_inputs=ag__.ld(self)._concrete_stateful_fn.captured_inputs), fscope)), None, fscope)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 396, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 479, in _call_unconverted
+    return f(*args)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py", line 201, in wrapper
+    return target(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/util/deprecation.py", line 538, in new_func
+    return func(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/ops/control_flow_ops.py", line 1180, in cond
+    return cond_v2.cond_v2(pred, true_fn, false_fn, name)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/ops/cond_v2.py", line 89, in cond_v2
+    op_return_value=pred)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 990, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/tmp/tmp808rsxxf.py", line 45, in <lambda>
+    retval_ = ag__.converted_call(ag__.ld(control_flow_ops).cond, (ag__.ld(condition), ag__.autograph_artifact((lambda : ag__.converted_call(ag__.ld(self)._stateless_fn, tuple(ag__.ld(inner_args)), dict(**ag__.ld(inner_kwds)), fscope))), ag__.converted_call(ag__.ld(functools).partial, (ag__.ld(self)._concrete_stateful_fn._call_flat, ag__.ld(inner_filtered_flat_args)), dict(captured_inputs=ag__.ld(self)._concrete_stateful_fn.captured_inputs), fscope)), None, fscope)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 396, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 478, in _call_unconverted
+    return f(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2941, in __call__
+    filtered_flat_args) = self._maybe_define_function(args, kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3361, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3206, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 990, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 634, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3887, in bound_method_wrapper
+    return wrapped_fn(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 973, in wrapper
+    user_requested=True,
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 459, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "/tmp/tmpfc48n75b.py", line 11, in tf__distributed_training_steps
+    ag__.converted_call(ag__.ld(self).args.strategy.run, (ag__.ld(self).apply_gradients, ag__.ld(inputs)), None, fscope)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 350, in converted_call
+    return _call_unconverted(f, args, kwargs, options, False)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 479, in _call_unconverted
+    return f(*args)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/distribute/one_device_strategy.py", line 188, in run
+    return super(OneDeviceStrategy, self).run(fn, args, kwargs, options)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/distribute/distribute_lib.py", line 1259, in run
+    return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2730, in call_for_each_replica
+    return self._call_for_each_replica(fn, args, kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/distribute/one_device_strategy.py", line 394, in _call_for_each_replica
+    return fn(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 667, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 459, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "/tmp/tmpfcp3023v.py", line 51, in tf__apply_gradients
+    ag__.if_stmt((ag__.ld(self).args.gradient_accumulation_steps == 1), if_body, else_body, get_state_1, set_state_1, ('features', 'labels'), 0)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/operators/control_flow.py", line 1165, in if_stmt
+    _py_if_stmt(cond, body, orelse)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/operators/control_flow.py", line 1218, in _py_if_stmt
+    return body() if cond else orelse()
+  File "/tmp/tmpfcp3023v.py", line 42, in else_body
+    ag__.for_stmt(ag__.converted_call(ag__.ld(tf).range, (ag__.ld(self).args.gradient_accumulation_steps,), None, fscope), None, loop_body, get_state, set_state, ('features', 'labels'), {'iterate_names': '_'})
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/operators/control_flow.py", line 414, in for_stmt
+    symbol_names, opts)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/operators/control_flow.py", line 629, in _tf_range_for_stmt
+    opts)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/operators/control_flow.py", line 1102, in _tf_while_stmt
+    aug_test, aug_body, aug_init_vars, **while_loop_opts)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/ops/control_flow_ops.py", line 2696, in while_loop
+    back_prop=back_prop)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/ops/while_v2.py", line 200, in while_loop
+    add_control_dependencies=add_control_dependencies)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 990, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/ops/while_v2.py", line 178, in wrapped_body
+    outputs = body(*_pack_sequence_as(orig_loop_vars, args))
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/operators/control_flow.py", line 1075, in aug_body
+    body()
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/operators/control_flow.py", line 599, in aug_body
+    body(iterate.value)
+  File "/tmp/tmpfcp3023v.py", line 36, in loop_body
+    ag__.converted_call(ag__.ld(self).training_step, (ag__.ld(reduced_features), ag__.ld(reduced_labels), ag__.ld(nb_instances_in_global_batch)), None, fscope)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 461, in converted_call
+    result = converted_f(*effective_args)
+  File "/tmp/tmpn7y4pnnj.py", line 11, in tf__training_step
+    (per_example_loss, _) = ag__.converted_call(ag__.ld(self).run_model, (ag__.ld(features), ag__.ld(labels), True), None, fscope)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 461, in converted_call
+    result = converted_f(*effective_args)
+  File "/tmp/tmpqcq4s924.py", line 40, in tf__run_model
+    ag__.if_stmt(ag__.converted_call(ag__.ld(isinstance), (ag__.ld(labels), ag__.ld(dict)), None, fscope), if_body_1, else_body_1, get_state_1, set_state_1, ('outputs',), 1)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/operators/control_flow.py", line 1165, in if_stmt
+    _py_if_stmt(cond, body, orelse)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/operators/control_flow.py", line 1218, in _py_if_stmt
+    return body() if cond else orelse()
+  File "/tmp/tmpqcq4s924.py", line 38, in else_body_1
+    outputs = ag__.converted_call(ag__.ld(self).model, (ag__.ld(features),), dict(labels=ag__.ld(labels), training=ag__.ld(training)), fscope)[:2]
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 350, in converted_call
+    return _call_unconverted(f, args, kwargs, options, False)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 478, in _call_unconverted
+    return f(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1012, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 667, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 459, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "/tmp/tmpe1fdr3im.py", line 26, in tf__call
+    outputs = ag__.converted_call(ag__.ld(self).longformer, (), dict(input_ids=ag__.ld(inputs)['input_ids'], attention_mask=ag__.ld(inputs)['attention_mask'], global_attention_mask=ag__.ld(inputs)['global_attention_mask'], token_type_ids=ag__.ld(inputs)['token_type_ids'], position_ids=ag__.ld(inputs)['position_ids'], inputs_embeds=ag__.ld(inputs)['inputs_embeds'], output_attentions=ag__.ld(inputs)['output_attentions'], output_hidden_states=ag__.ld(inputs)['output_hidden_states'], return_dict=ag__.ld(inputs)['return_dict'], training=ag__.ld(inputs)['training']), fscope)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 350, in converted_call
+    return _call_unconverted(f, args, kwargs, options, False)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 478, in _call_unconverted
+    return f(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1012, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 667, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 459, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "/tmp/tmp_ipo0j5c.py", line 106, in tf__call
+    encoder_outputs = ag__.converted_call(ag__.ld(self).encoder, (ag__.ld(embedding_output),), dict(attention_mask=ag__.ld(extended_attention_mask), padding_len=ag__.ld(padding_len), is_index_masked=ag__.ld(is_index_masked), is_index_global_attn=ag__.ld(is_index_global_attn), is_global_attn=ag__.ld(is_global_attn), output_attentions=ag__.ld(inputs)['output_attentions'], output_hidden_states=ag__.ld(inputs)['output_hidden_states'], return_dict=ag__.ld(inputs)['return_dict'], training=ag__.ld(inputs)['training']), fscope)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 350, in converted_call
+    return _call_unconverted(f, args, kwargs, options, False)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 478, in _call_unconverted
+    return f(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1012, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 667, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 459, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "/tmp/tmpfc30upij.py", line 63, in tf__call
+    ag__.for_stmt(ag__.converted_call(ag__.ld(enumerate), (ag__.ld(self).layer,), None, fscope), None, loop_body, get_state_2, set_state_2, ('all_global_attentions', 'all_hidden_states', 'hidden_states', 'all_attentions'), {'iterate_names': '(i, layer_module)'})
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/operators/control_flow.py", line 444, in for_stmt
+    _py_for_stmt(iter_, extra_test, body, None, None)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/operators/control_flow.py", line 473, in _py_for_stmt
+    body(target)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/operators/control_flow.py", line 459, in protected_body
+    original_body(protected_iter)
+  File "/tmp/tmpfc30upij.py", line 40, in loop_body
+    layer_outputs = ag__.converted_call(ag__.ld(layer_module), ([ag__.ld(hidden_states), ag__.ld(attention_mask), ag__.ld(is_index_masked), ag__.ld(is_index_global_attn), ag__.ld(is_global_attn)],), dict(training=ag__.ld(training)), fscope)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 350, in converted_call
+    return _call_unconverted(f, args, kwargs, options, False)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 478, in _call_unconverted
+    return f(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1012, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 667, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 459, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "/tmp/tmpssut0hw6.py", line 11, in tf__call
+    attention_outputs = ag__.converted_call(ag__.ld(self).attention, ([ag__.ld(hidden_states), ag__.ld(attention_mask), ag__.ld(is_index_masked), ag__.ld(is_index_global_attn), ag__.ld(is_global_attn)],), dict(training=ag__.ld(training)), fscope)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 350, in converted_call
+    return _call_unconverted(f, args, kwargs, options, False)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 478, in _call_unconverted
+    return f(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1012, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 667, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 459, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "/tmp/tmp3_npb9qb.py", line 11, in tf__call
+    self_outputs = ag__.converted_call(ag__.ld(self).self_attention, ([ag__.ld(hidden_states), ag__.ld(attention_mask), ag__.ld(is_index_masked), ag__.ld(is_index_global_attn), ag__.ld(is_global_attn)],), dict(training=ag__.ld(training)), fscope)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 350, in converted_call
+    return _call_unconverted(f, args, kwargs, options, False)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 478, in _call_unconverted
+    return f(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1012, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 667, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 459, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "/tmp/tmpayddsbu0.py", line 21, in tf__call
+    attn_scores = ag__.converted_call(ag__.ld(self)._sliding_chunks_query_key_matmul, (ag__.ld(query_vectors), ag__.ld(key_vectors), ag__.ld(self).one_sided_attn_window_size), None, fscope)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 461, in converted_call
+    result = converted_f(*effective_args)
+  File "/tmp/tmpgri_bjzq.py", line 13, in tf___sliding_chunks_query_key_matmul
+    ag__.converted_call(ag__.ld(tf).debugging.assert_equal, (ag__.converted_call(ag__.ld(shape_list), (ag__.ld(query),), None, fscope), ag__.converted_call(ag__.ld(shape_list), (ag__.ld(key),), None, fscope)), dict(message=f'Shape of query and key should be equal, but got query: {ag__.converted_call(ag__.ld(shape_list), (ag__.ld(query),), None, fscope)} and key: {ag__.converted_call(ag__.ld(shape_list), (ag__.ld(key),), None, fscope)}'), fscope)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 350, in converted_call
+    return _call_unconverted(f, args, kwargs, options, False)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 478, in _call_unconverted
+    return f(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py", line 201, in wrapper
+    return target(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/ops/check_ops.py", line 659, in assert_equal_v2
+    return assert_equal(x=x, y=y, summarize=summarize, message=message, name=name)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py", line 201, in wrapper
+    return target(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/ops/check_ops.py", line 671, in assert_equal
+    data, summarize, message, name)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/ops/check_ops.py", line 373, in _binary_assert
+    return control_flow_ops.Assert(condition, data, summarize=summarize)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py", line 201, in wrapper
+    return target(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/util/tf_should_use.py", line 247, in wrapped
+    return _add_should_use_warning(fn(*args, **kwargs),
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/ops/control_flow_ops.py", line 162, in Assert
+    xs = ops.convert_n_to_tensor(data)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/ops.py", line 1640, in convert_n_to_tensor
+    as_ref=False)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/ops.py", line 1608, in internal_convert_n_to_tensor
+    ctx=ctx))
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/profiler/trace.py", line 163, in wrapped
+    return func(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/ops.py", line 1540, in convert_to_tensor
+    ret = conversion_func(value, dtype=dtype, name=name, as_ref=as_ref)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 339, in _constant_tensor_conversion_function
+    return constant(v, dtype=dtype, name=name)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 265, in constant
+    allow_broadcast=True)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 287, in _constant_impl
+    "Const", [], [dtype_value.type], attrs=attrs, name=name).outputs[0]
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 592, in _create_op_internal
+    compute_device)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/ops.py", line 3536, in _create_op_internal
+    op_def=op_def)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/ops.py", line 1990, in __init__
+    self._traceback = tf_stack.extract_stack()
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/util/tf_stack.py", line 153, in extract_stack
+    _source_filter_stacks[thread_key])
+KeyboardInterrupt

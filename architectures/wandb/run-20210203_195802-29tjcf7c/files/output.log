@@ -1,0 +1,66 @@
+2021-02-03 19:58:05.549433: W tensorflow/core/grappler/optimizers/data/auto_shard.cc:656] In AUTO-mode, and switching to DATA-based sharding, instead of FILE-based sharding as we cannot find appropriate reader dataset op(s) to shard. Error: Found an unshardable source dataset: name: "TensorSliceDataset/_2"
+op: "TensorSliceDataset"
+input: "Placeholder/_0"
+input: "Placeholder/_1"
+attr {
+  key: "Toutput_types"
+  value {
+    list {
+      type: DT_INT32
+      type: DT_INT32
+    }
+  }
+}
+attr {
+  key: "output_shapes"
+  value {
+    list {
+      shape {
+        dim {
+          size: 2048
+        }
+      }
+      shape {
+        dim {
+          size: 2048
+        }
+      }
+    }
+  }
+}
+
+2021-02-03 19:58:05.611180: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-02-03 19:58:05.631244: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2200000000 Hz
+The parameters `output_attentions`, `output_hidden_states` and `use_cache` cannot be updated when calling a model.They have to be set to True/False in the config object (i.e.: `config=XConfig.from_pretrained('name', output_attentions=True)`).
+The parameter `return_dict` cannot be set in graph mode and will always be set to `True`.
+The parameters `output_attentions`, `output_hidden_states` and `use_cache` cannot be updated when calling a model.They have to be set to True/False in the config object (i.e.: `config=XConfig.from_pretrained('name', output_attentions=True)`).
+The parameter `return_dict` cannot be set in graph mode and will always be set to `True`.
+Traceback (most recent call last):
+  File "/home/pfrod/architectures/prosenet_longformer.py", line 213, in <module>
+    trainer.train()
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer_tf.py", line 549, in train
+    self.distributed_training_steps(batch)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 828, in __call__
+    result = self._call(*args, **kwds)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 956, in _call
+    filtered_flat_args)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2943, in __call__
+    filtered_flat_args, captured_inputs=graph_function.captured_inputs)  # pylint: disable=protected-access
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 1919, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager))
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 560, in call
+    ctx=ctx)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: 2 root error(s) found.
+  (0) Invalid argument:  Incompatible shapes: [8,2048,12,514] vs. [8,2048,12,513]
+	 [[{{node cond/else/_1/cond/StatefulPartitionedCall/while/body/_6137/while/gradients/while/tf_longformer_for_sequence_classification/longformer/encoder/layer_._0/attention/self/SelectV2_4_grad/BroadcastGradientArgs_1}}]]
+	 [[cond/else/_1/cond/StatefulPartitionedCall/while/body/_6137/while/Variable_261/VarIsInitializedOp/_2128]]
+  (1) Invalid argument:  Incompatible shapes: [8,2048,12,514] vs. [8,2048,12,513]
+	 [[{{node cond/else/_1/cond/StatefulPartitionedCall/while/body/_6137/while/gradients/while/tf_longformer_for_sequence_classification/longformer/encoder/layer_._0/attention/self/SelectV2_4_grad/BroadcastGradientArgs_1}}]]
+0 successful operations.
+0 derived errors ignored. [Op:__inference_fn_with_cond_118102]
+
+Function call stack:
+fn_with_cond -> fn_with_cond
+

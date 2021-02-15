@@ -1,0 +1,18 @@
+{
+    "os": "Linux-4.15.0-132-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.9",
+    "heartbeatAt": "2021-02-02T18:30:28.630508",
+    "startedAt": "2021-02-02T18:30:26.008223",
+    "docker": null,
+    "gpu": "Tesla V100-PCIE-32GB",
+    "gpu_count": 1,
+    "cpu_count": 40,
+    "cuda": "10.1.243",
+    "args": [],
+    "state": "running",
+    "codePath": "prosenet.py",
+    "program": "/home/pfrod/architectures/prosenet.py",
+    "host": "minus-crc",
+    "username": "pfrod",
+    "executable": "/home/pfrod/anaconda3/envs/env_minus/bin/python"
+}

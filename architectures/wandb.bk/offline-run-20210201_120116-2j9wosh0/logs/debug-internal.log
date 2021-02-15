@@ -1,0 +1,81 @@
+2021-02-01 12:01:17,397 INFO    MainThread:11099 [internal.py:wandb_internal():64] W&B internal server running at pid: 11099
+2021-02-01 12:01:17,401 INFO    WriterThread:11099 [datastore.py:open_for_write():77] open: /home/pfrod/architectures/wandb/offline-run-20210201_120116-2j9wosh0/run-2j9wosh0.wandb
+2021-02-01 12:01:17,402 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: run_start
+2021-02-01 12:01:17,915 DEBUG   HandlerThread:11099 [tpu_cluster_resolver.py:<module>():36] Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2021-02-01 12:01:18,794 DEBUG   HandlerThread:11099 [meta.py:__init__():34] meta init
+2021-02-01 12:01:18,794 DEBUG   HandlerThread:11099 [meta.py:__init__():48] meta init done
+2021-02-01 12:01:18,794 DEBUG   HandlerThread:11099 [meta.py:probe():190] probe
+2021-02-01 12:01:18,800 DEBUG   HandlerThread:11099 [git.py:repo():33] git repository is invalid
+2021-02-01 12:01:18,800 DEBUG   HandlerThread:11099 [meta.py:_save_pip():52] save pip
+2021-02-01 12:01:18,801 DEBUG   HandlerThread:11099 [meta.py:_save_pip():66] save pip done
+2021-02-01 12:01:18,801 DEBUG   HandlerThread:11099 [meta.py:probe():231] probe done
+2021-02-01 12:01:20,923 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: poll_exit
+2021-02-01 12:01:20,923 DEBUG   SenderThread:11099 [sender.py:send():117] send: exit
+2021-02-01 12:01:20,924 INFO    SenderThread:11099 [sender.py:send_exit():195] handling exit code: 1
+2021-02-01 12:01:20,924 INFO    SenderThread:11099 [sender.py:send_exit():203] send defer
+2021-02-01 12:01:20,924 DEBUG   SenderThread:11099 [sender.py:send():117] send: request
+2021-02-01 12:01:20,925 DEBUG   SenderThread:11099 [sender.py:send_request():126] send_request: poll_exit
+2021-02-01 12:01:20,925 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: defer
+2021-02-01 12:01:20,926 INFO    HandlerThread:11099 [handler.py:handle_request_defer():69] handle defer: 0
+2021-02-01 12:01:20,926 DEBUG   SenderThread:11099 [sender.py:send():117] send: request
+2021-02-01 12:01:20,926 DEBUG   SenderThread:11099 [sender.py:send_request():126] send_request: defer
+2021-02-01 12:01:20,926 INFO    SenderThread:11099 [sender.py:send_request_defer():212] handle sender defer: 0
+2021-02-01 12:01:20,926 INFO    SenderThread:11099 [sender.py:send_request_defer():248] send defer: 1
+2021-02-01 12:01:20,927 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: defer
+2021-02-01 12:01:20,927 INFO    HandlerThread:11099 [handler.py:handle_request_defer():69] handle defer: 1
+2021-02-01 12:01:20,983 DEBUG   SenderThread:11099 [sender.py:send():117] send: request
+2021-02-01 12:01:20,984 DEBUG   SenderThread:11099 [sender.py:send_request():126] send_request: defer
+2021-02-01 12:01:20,984 INFO    SenderThread:11099 [sender.py:send_request_defer():212] handle sender defer: 1
+2021-02-01 12:01:20,985 INFO    SenderThread:11099 [sender.py:send_request_defer():248] send defer: 2
+2021-02-01 12:01:20,985 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: defer
+2021-02-01 12:01:20,985 INFO    HandlerThread:11099 [handler.py:handle_request_defer():69] handle defer: 2
+2021-02-01 12:01:20,985 DEBUG   SenderThread:11099 [sender.py:send():117] send: request
+2021-02-01 12:01:20,986 DEBUG   SenderThread:11099 [sender.py:send_request():126] send_request: defer
+2021-02-01 12:01:20,986 INFO    SenderThread:11099 [sender.py:send_request_defer():212] handle sender defer: 2
+2021-02-01 12:01:20,986 INFO    SenderThread:11099 [sender.py:send_request_defer():248] send defer: 3
+2021-02-01 12:01:20,986 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: defer
+2021-02-01 12:01:20,986 INFO    HandlerThread:11099 [handler.py:handle_request_defer():69] handle defer: 3
+2021-02-01 12:01:20,987 DEBUG   SenderThread:11099 [sender.py:send():117] send: request
+2021-02-01 12:01:20,987 DEBUG   SenderThread:11099 [sender.py:send_request():126] send_request: defer
+2021-02-01 12:01:20,987 INFO    SenderThread:11099 [sender.py:send_request_defer():212] handle sender defer: 3
+2021-02-01 12:01:20,987 INFO    SenderThread:11099 [sender.py:send_request_defer():248] send defer: 4
+2021-02-01 12:01:20,987 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: defer
+2021-02-01 12:01:20,988 INFO    HandlerThread:11099 [handler.py:handle_request_defer():69] handle defer: 4
+2021-02-01 12:01:20,988 DEBUG   SenderThread:11099 [sender.py:send():117] send: request
+2021-02-01 12:01:20,988 DEBUG   SenderThread:11099 [sender.py:send_request():126] send_request: defer
+2021-02-01 12:01:20,988 INFO    SenderThread:11099 [sender.py:send_request_defer():212] handle sender defer: 4
+2021-02-01 12:01:20,988 INFO    SenderThread:11099 [sender.py:send_request_defer():248] send defer: 5
+2021-02-01 12:01:20,988 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: defer
+2021-02-01 12:01:20,989 INFO    HandlerThread:11099 [handler.py:handle_request_defer():69] handle defer: 5
+2021-02-01 12:01:20,989 DEBUG   SenderThread:11099 [sender.py:send():117] send: request
+2021-02-01 12:01:20,989 DEBUG   SenderThread:11099 [sender.py:send_request():126] send_request: defer
+2021-02-01 12:01:20,989 INFO    SenderThread:11099 [sender.py:send_request_defer():212] handle sender defer: 5
+2021-02-01 12:01:20,989 INFO    SenderThread:11099 [sender.py:send_request_defer():248] send defer: 6
+2021-02-01 12:01:20,989 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: defer
+2021-02-01 12:01:20,990 INFO    HandlerThread:11099 [handler.py:handle_request_defer():69] handle defer: 6
+2021-02-01 12:01:20,990 DEBUG   SenderThread:11099 [sender.py:send():117] send: request
+2021-02-01 12:01:20,990 DEBUG   SenderThread:11099 [sender.py:send_request():126] send_request: defer
+2021-02-01 12:01:20,990 INFO    SenderThread:11099 [sender.py:send_request_defer():212] handle sender defer: 6
+2021-02-01 12:01:20,990 INFO    SenderThread:11099 [sender.py:send_request_defer():248] send defer: 7
+2021-02-01 12:01:20,990 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: defer
+2021-02-01 12:01:20,991 INFO    HandlerThread:11099 [handler.py:handle_request_defer():69] handle defer: 7
+2021-02-01 12:01:20,991 DEBUG   SenderThread:11099 [sender.py:send():117] send: request
+2021-02-01 12:01:20,991 DEBUG   SenderThread:11099 [sender.py:send_request():126] send_request: defer
+2021-02-01 12:01:20,991 INFO    SenderThread:11099 [sender.py:send_request_defer():212] handle sender defer: 7
+2021-02-01 12:01:20,991 INFO    SenderThread:11099 [sender.py:send_request_defer():248] send defer: 8
+2021-02-01 12:01:20,992 DEBUG   SenderThread:11099 [sender.py:send():117] send: final
+2021-02-01 12:01:20,992 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: defer
+2021-02-01 12:01:20,992 INFO    HandlerThread:11099 [handler.py:handle_request_defer():69] handle defer: 8
+2021-02-01 12:01:20,993 DEBUG   SenderThread:11099 [sender.py:send():117] send: request
+2021-02-01 12:01:20,993 DEBUG   SenderThread:11099 [sender.py:send_request():126] send_request: defer
+2021-02-01 12:01:20,993 INFO    SenderThread:11099 [sender.py:send_request_defer():212] handle sender defer: 8
+2021-02-01 12:01:22,929 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: poll_exit
+2021-02-01 12:01:22,930 DEBUG   SenderThread:11099 [sender.py:send():117] send: request
+2021-02-01 12:01:22,930 DEBUG   SenderThread:11099 [sender.py:send_request():126] send_request: poll_exit
+2021-02-01 12:01:22,932 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: get_summary
+2021-02-01 12:01:22,933 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: sampled_history
+2021-02-01 12:01:22,933 DEBUG   HandlerThread:11099 [handler.py:handle_request():55] handle_request: shutdown
+2021-02-01 12:01:22,934 INFO    HandlerThread:11099 [handler.py:finish():274] shutting down handler
+2021-02-01 12:01:22,992 INFO    WriterThread:11099 [datastore.py:close():258] close: /home/pfrod/architectures/wandb/offline-run-20210201_120116-2j9wosh0/run-2j9wosh0.wandb
+2021-02-01 12:01:23,931 INFO    SenderThread:11099 [sender.py:finish():756] shutting down sender
+2021-02-01 12:01:23,932 INFO    MainThread:11099 [internal.py:handle_exit():139] Internal process exited

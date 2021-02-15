@@ -1,0 +1,18 @@
+{
+    "os": "Linux-4.15.0-132-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.9",
+    "heartbeatAt": "2021-02-08T13:20:56.347831",
+    "startedAt": "2021-02-08T13:20:53.526304",
+    "docker": null,
+    "gpu": "Tesla V100-PCIE-32GB",
+    "gpu_count": 1,
+    "cpu_count": 40,
+    "cuda": "10.1.243",
+    "args": [],
+    "state": "running",
+    "codePath": "bert_tout_court.py",
+    "program": "/home/pfrod/architectures/bert_tout_court.py",
+    "host": "minus-crc",
+    "username": "pfrod",
+    "executable": "/home/pfrod/anaconda3/envs/env_minus/bin/python"
+}

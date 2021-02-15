@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/pfrod/architectures/prosenet.py", line 97, in <module>
+    trainer.train()
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer_tf.py", line 457, in train
+    train_ds = self.get_train_tfdataset()
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer_tf.py", line 141, in get_train_tfdataset
+    raise ValueError("The training dataset must have an asserted cardinality")
+ValueError: The training dataset must have an asserted cardinality

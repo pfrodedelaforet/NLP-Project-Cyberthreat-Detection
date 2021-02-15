@@ -1,0 +1,103 @@
+2021-02-08 12:57:56.499139: W tensorflow/core/grappler/optimizers/data/auto_shard.cc:656] In AUTO-mode, and switching to DATA-based sharding, instead of FILE-based sharding as we cannot find appropriate reader dataset op(s) to shard. Error: Found an unshardable source dataset: name: "TensorSliceDataset/_2"
+op: "TensorSliceDataset"
+input: "Placeholder/_0"
+input: "Placeholder/_1"
+attr {
+  key: "Toutput_types"
+  value {
+    list {
+      type: DT_INT32
+      type: DT_INT32
+    }
+  }
+}
+attr {
+  key: "output_shapes"
+  value {
+    list {
+      shape {
+        dim {
+          size: 256
+        }
+      }
+      shape {
+        dim {
+          size: 256
+        }
+      }
+    }
+  }
+}
+
+2021-02-08 12:57:56.562377: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-02-08 12:57:56.583285: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2200000000 Hz
+The parameters `output_attentions`, `output_hidden_states` and `use_cache` cannot be updated when calling a model.They have to be set to True/False in the config object (i.e.: `config=XConfig.from_pretrained('name', output_attentions=True)`).
+The parameter `return_dict` cannot be set in graph mode and will always be set to `True`.
+Traceback (most recent call last):
+  File "/home/pfrod/architectures/bert_tout_court.py", line 109, in <module>
+    trainer.train()
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer_tf.py", line 549, in train
+    self.distributed_training_steps(batch)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 828, in __call__
+    result = self._call(*args, **kwds)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 871, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 726, in _initialize
+    *args, **kwds))
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2969, in _get_concrete_function_internal_garbage_collected
+    graph_function, _ = self._maybe_define_function(args, kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3361, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3206, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 990, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 634, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3887, in bound_method_wrapper
+    return wrapped_fn(*args, **kwargs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 977, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+ValueError: in user code:
+
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer_tf.py:671 distributed_training_steps  *
+        self.args.strategy.run(self.apply_gradients, inputs)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer_tf.py:643 apply_gradients  *
+        self.training_step(reduced_features, reduced_labels, nb_instances_in_global_batch)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer_tf.py:616 training_step  *
+        per_example_loss, _ = self.run_model(features, labels, True)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer_tf.py:718 run_model  *
+        outputs = self.model(features, labels=labels, training=training)[:2]
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/models/roberta/modeling_tf_roberta.py:1043 call  *
+        outputs = self.roberta(
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/models/roberta/modeling_tf_roberta.py:563 call  *
+        embedding_output = self.embeddings(
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/models/roberta/modeling_tf_roberta.py:168 call  *
+        return self._embedding(input_ids, position_ids, token_type_ids, inputs_embeds, training=training)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/models/roberta/modeling_tf_roberta.py:204 _embedding  *
+        embeddings = self.LayerNorm(embeddings)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer.py:1012 __call__  **
+        outputs = call_fn(inputs, *args, **kwargs)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/keras/layers/normalization.py:1252 call
+        scale, offset = _broadcast(self.gamma), _broadcast(self.beta)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/keras/layers/normalization.py:1239 _broadcast
+        return array_ops.reshape(v, broadcast_shape)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:201 wrapper
+        return target(*args, **kwargs)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:195 reshape
+        result = gen_array_ops.reshape(tensor, shape, name)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/ops/gen_array_ops.py:8378 reshape
+        "Reshape", tensor=tensor, shape=shape, name=name)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:750 _apply_op_helper
+        attrs=attr_protos, op_def=op_def)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py:592 _create_op_internal
+        compute_device)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:3536 _create_op_internal
+        op_def=op_def)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:2016 __init__
+        control_input_ops, op_def)
+    /home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:1856 _create_c_op
+        raise ValueError(str(e))
+
+    ValueError: Cannot reshape a tensor with 768 elements to shape [1,1,256,1] (256 elements) for '{{node while/tf_roberta_for_sequence_classification_1/roberta/embeddings/LayerNorm/Reshape}} = Reshape[T=DT_FLOAT, Tshape=DT_INT32](while/tf_roberta_for_sequence_classification_1/roberta/embeddings/LayerNorm/Reshape/ReadVariableOp, while/tf_roberta_for_sequence_classification_1/roberta/embeddings/LayerNorm/Reshape/shape)' with input shapes: [768], [4] and with input tensors computed as partial shapes: input[1] = [1,1,256,1].
+

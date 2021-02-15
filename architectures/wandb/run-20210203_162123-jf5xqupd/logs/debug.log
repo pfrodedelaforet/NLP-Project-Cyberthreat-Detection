@@ -1,0 +1,13 @@
+2021-02-03 16:21:23,959 INFO    MainThread:40634 [wandb_setup.py:_flush():70] setting env: {}
+2021-02-03 16:21:23,959 INFO    MainThread:40634 [wandb_setup.py:_flush():70] multiprocessing start_methods=fork,spawn,forkserver
+2021-02-03 16:21:23,959 INFO    MainThread:40634 [wandb_setup.py:_flush():70] setting login settings: {}
+2021-02-03 16:21:23,959 INFO    MainThread:40634 [wandb_init.py:_log_setup():318] Logging user logs to /home/pfrod/architectures/wandb/run-20210203_162123-jf5xqupd/logs/debug.log
+2021-02-03 16:21:23,959 INFO    MainThread:40634 [wandb_init.py:_log_setup():319] Logging internal logs to /home/pfrod/architectures/wandb/run-20210203_162123-jf5xqupd/logs/debug-internal.log
+2021-02-03 16:21:26,642 INFO    MainThread:40634 [wandb_run.py:_console_start():1396] atexit reg
+2021-02-03 16:21:26,643 INFO    MainThread:40634 [wandb_run.py:_redirect():1259] redirect: SettingsConsole.REDIRECT
+2021-02-03 16:21:26,644 INFO    MainThread:40634 [wandb_run.py:_redirect():1264] Redirecting console.
+2021-02-03 16:21:26,644 INFO    MainThread:40634 [redirect.py:install():213] install start
+2021-02-03 16:21:26,644 INFO    MainThread:40634 [redirect.py:install():228] install stop
+2021-02-03 16:21:26,645 INFO    MainThread:40634 [redirect.py:install():213] install start
+2021-02-03 16:21:26,645 INFO    MainThread:40634 [redirect.py:install():228] install stop
+2021-02-03 16:21:26,645 INFO    MainThread:40634 [wandb_run.py:_redirect():1310] Redirects installed.

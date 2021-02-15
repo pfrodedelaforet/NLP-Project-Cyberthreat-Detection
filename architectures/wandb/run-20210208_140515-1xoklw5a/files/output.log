@@ -1,0 +1,12 @@
+  0%|          | 0/248 [00:00<?, ?it/s]  0%|          | 1/248 [00:56<3:52:07, 56.39s/it]  1%|          | 2/248 [01:49<3:44:19, 54.71s/it]Traceback (most recent call last):
+  File "/home/pfrod/architectures/longformer_implementation.py", line 79, in <module>
+    trainer.train()
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer.py", line 888, in train
+    tr_loss += self.training_step(model, inputs)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer.py", line 1259, in training_step
+    self.scaler.scale(loss).backward()
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/torch/tensor.py", line 221, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/torch/autograd/__init__.py", line 132, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+KeyboardInterrupt

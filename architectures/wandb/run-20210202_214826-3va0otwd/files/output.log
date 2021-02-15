@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/pfrod/architectures/prosenet.py", line 111, in <module>
+    trainer.train()
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer_tf.py", line 457, in train
+    train_ds = self.get_train_tfdataset()
+  File "/home/pfrod/anaconda3/envs/env_minus/lib/python3.7/site-packages/transformers/trainer_tf.py", line 138, in get_train_tfdataset
+    self.num_train_examples = self.train_dataset.cardinality().numpy()
+AttributeError: 'dict' object has no attribute 'cardinality'
