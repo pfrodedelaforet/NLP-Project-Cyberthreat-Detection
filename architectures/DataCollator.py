@@ -1,4 +1,6 @@
 import torch
+
+"""Script used to train the Longformer architecture using PyTorch."""
 class DataCollator:
     def __init__(self, tokenizer):
         self.tokenizer = tokenizer

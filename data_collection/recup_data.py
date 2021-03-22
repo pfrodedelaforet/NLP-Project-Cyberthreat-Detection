@@ -2,8 +2,11 @@
 import tweepy as tw
 import xlsxwriter
 import openpyxl
+"""This script allows to collect the 200 last tweets of each account in the list, 
+keep only tweets with links and store interesting features in an excel sheet (each line corresponds to one tweet)."""
 workbook = xlsxwriter.Workbook('tablerase.xlsx')
 worksheet = workbook.add_worksheet()
+
 with open('cles.txt', 'r') as f:
     lignes = []
     for line in f:

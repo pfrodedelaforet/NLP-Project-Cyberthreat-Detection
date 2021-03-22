@@ -126,7 +126,7 @@ data_test = train_dataset.shuffle(100).batch(8)"""
 """
 model.compile(optimizer = tf.keras.optimizers.Adam(learning_rate=3e-5), loss = 'binary_crossentropy')
 model.fit(data_train, epochs=3)"""
-
+"""ATTEMPT TO USE PROSENET WITH TENSORFLOW USING TRAININGARGUMENTS AND TRAINER. IT FAILED, RATHER CONSIDER PROSENET TRANSFORMER FOR THE OPERATIONAL IMPLEMENTATION. """
 import os
 
 from transformers import TFLongformerForSequenceClassification, LongformerTokenizer, TFTrainer, TFTrainingArguments

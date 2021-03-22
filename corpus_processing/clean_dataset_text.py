@@ -7,7 +7,7 @@ import os
 from pathlib import Path
 from tqdm import tqdm
 import re 
-"""Remove actions, spaces, symbols, IP addresses, links etc..."""
+"""Removes actions, spaces, symbols, IP addresses, links etc... from the text files of the dataset."""
 cequongarde = [',', '.', '"', ':', ')', '(','!', '?' ';']
 puncts = ['-','|', "'", '$', '&', '/', '[', ']', '>', '%', '=', '#', '*', '+', '\\', '•',  '~', '@', '£',
  '·', '_', '{', '}', '©', '^', '®', '`',  '<', '→', '°', '€', '™', '›',  '♥', '←', '×', '§', '″', '′', 'Â', '█', '½', 'à', '…',
@@ -46,4 +46,3 @@ for label in iterd:#on peut bien modifier iterdir c'est pas grave
         with open("../storage/dataset/treated_articles/"+name[0]+'_TREATED'+'/'+name[1], 'w', encoding = 'utf-8') as g : 
             g.writelines(list_lines)
 
-""" après vérification, il ne nous reste plus que les caractères de l'alphabet latin, et les symboles qu'on a choisi de garder"""

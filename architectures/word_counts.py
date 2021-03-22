@@ -6,7 +6,7 @@ from pathlib import Path
 import pickle
 import numpy as np
 from sklearn.model_selection import train_test_split
-
+"""Script to compute and store Count term-document matrix on our dataset, then used in multinomial_naive_bayes.py and clustering.py."""
 nltk.download('stopwords')
 PATH = Path("../storage/dataset/treated_articles")
 def countvect(path):

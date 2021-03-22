@@ -8,6 +8,8 @@ import multiprocessing
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 import numpy as np
+"""Script used to train the Word2vec embedding architecture thanks to the cybersecurity corpus 
+and create Word2vec embeddings """
 embedding_corpus = open('../storage/treated/cybersec_final.txt', 'r', encoding='utf-8')
 cores = multiprocessing.cpu_count()
 print(cores)

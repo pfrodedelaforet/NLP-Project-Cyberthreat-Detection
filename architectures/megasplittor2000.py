@@ -7,7 +7,8 @@ suffixes = "(Inc|Ltd|Jr|Sr|Co)"
 starters = "(Mr|Mrs|Ms|Dr|He\s|She\s|It\s|They\s|Their\s|Our\s|We\s|But\s|However\s|That\s|This\s|Wherever)"
 acronyms = "([A-Z][.][A-Z][.](?:[A-Z][.])?)"
 websites = "[.](com|net|org|io|gov)"
-
+"""Script found on the Internet, very efficient when dealing with long corpora to split the text in sentences 
+without considering the . at the end of Ph.D. as a splitting character for instance""" 
 def split_into_lists_of_words(text, split_words = True):
     text = " " + text + "  "
     text = text.replace("\n"," ")

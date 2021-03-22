@@ -6,7 +6,7 @@ from pathlib import Path
 import pickle
 from sklearn.model_selection import train_test_split
 import numpy as np
-#PROBLEME : INCESTE, CAR ON UTILISE NOTAMMENT LES DONNEES DE TEST POUR SAVOIR SI C EST RARE OU NON
+"""Script to compute and store TFIDF term-document matrix on our dataset, then used in multinomial_naive_bayes.py and clustering.py."""
 nltk.download('stopwords')
 PATH = Path("../storage/dataset/treated_articles")
 def tf_idf(path):

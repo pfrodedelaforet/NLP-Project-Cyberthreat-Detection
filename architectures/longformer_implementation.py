@@ -17,7 +17,7 @@ from sklearn.model_selection import train_test_split
 from dataset_pytorch import Dataset_alamano
 from DataCollator import DataCollator
 from compute_metrics import compute_metrics
-#train_data, test_data = datasets.load_dataset('imdb', split =['train', 'test'])
+"""Implementation of the Longformer, used before dealing with ProSeNet"""
 PATH = Path("../storage/treated_articles")
 iterd = PATH.iterdir()
 dat = []

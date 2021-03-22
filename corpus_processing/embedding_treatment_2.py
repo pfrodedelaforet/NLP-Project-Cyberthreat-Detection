@@ -7,7 +7,8 @@ import os
 from pathlib import Path
 from tqdm import tqdm
 import re 
-"""Approximately same thing as clean_dataset_text, but applied on embedding data."""
+"""Approximately same thing as clean_dataset_text, but applied on embedding data.This treatment follows the embedding_treatment.py, in which we adapted the treatment to each website.
+Here it is a final global treatment applied to the whole corpus."""
 cequongarde = [',', '.', '"', ':', ')', '(','!', '?' ';']
 puncts = ['-','|', "'", '$', '&', '/', '[', ']', '>', '%', '=', '#', '*', '+', '\\', '•',  '~', '@', '£',
  '·', '_', '{', '}', '©', '^', '®', '`',  '<', '→', '°', '€', '™', '›',  '♥', '←', '×', '§', '″', '′', 'Â', '█', '½', 'à', '…',

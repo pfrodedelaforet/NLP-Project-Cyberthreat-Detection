@@ -18,7 +18,7 @@ from sklearn.model_selection import train_test_split
 from dataset_pytorch import Dataset_alamano
 from DataCollator import DataCollator
 from compute_metrics import compute_metrics
-#train_data, test_data = datasets.load_dataset('imdb', split =['train', 'test'])
+"""ATTEMPT TO USE ROBERTA INSTEAD OF LONGFORMER, NOT OPERATIONAL."""
 PATH = Path("../storage/treated_articles")
 iterd = PATH.iterdir()
 dat = []

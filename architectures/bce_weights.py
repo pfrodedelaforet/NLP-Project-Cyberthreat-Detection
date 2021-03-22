@@ -1,11 +1,8 @@
-"""from tensorflow.keras import backend as K
-def wbce( y_true, y_pred, weight1=4, weight0=1) :
-    y_true = K.clip(y_true, K.epsilon(), 1-K.epsilon())
-    y_pred = K.clip(y_pred, K.epsilon(), 1-K.epsilon())
-    logloss = -(y_true * K.log(y_pred) * weight1 + (1 - y_true) * K.log(1 - y_pred) * weight0 )
-    return K.mean( logloss, axis=-1)"""
+
 import tensorflow as tf
 from keras import backend as K
+"""python file to import if one wants to use weighted binary cross entropy."""
+
 def weighted_binary_crossentropy(pos_weight=0.78/0.22):
     def _to_tensor(x, dtype):
         """Convert the input `x` to a tensor of type `dtype`.

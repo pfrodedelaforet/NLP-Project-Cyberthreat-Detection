@@ -1,6 +1,7 @@
 import openpyxl
 from datetime import datetime, timedelta
 import re
+"""This script computes the average posting frequency of tweets with link for each account and stores everything in sheet 3.""" 
 wb = openpyxl.load_workbook("new_dataset_inv_search.xlsx")
 ws = wb["Sheet1"]
 ws3 = wb.create_sheet("days_per_tweet")

@@ -8,24 +8,27 @@ from sklearn.model_selection import train_test_split, StratifiedShuffleSplit
 import sys
 from tensorflow.keras import Model
 from tensorflow.keras.layers import Input, Dense, Flatten, Dropout
-sys.path.insert(1, '/home/pfrod/architectures/tf-ProSeNet/prosenet')
-#from prototypes import Prototypes
+sys.path.insert(1, '/home/pfrod/architectures/tf-ProSeNet_adapted/prosenet')
+
 from prototypes_2 import Prototypes
-# from projection import PrototypeProjection
 from projection_2 import PrototypeProjection
 from tensorflow.raw_ops import RepeatDataset
 import tensorflow_addons as tfa
 from operator import itemgetter
 from bce_weights import weighted_binary_crossentropy
+"""Script used to implement Longformer along with ProSeNet, after pretraining the encoder on our dataset without the Prototype Layer."""
+
 tf.keras.backend.clear_session()
 gpu_act = True
+
 if gpu_act : 
     GPU = tf.config.list_physical_devices('GPU')
     tf.config.experimental.set_memory_growth(GPU[0], True)
     #tf.config.experimental.set_virtual_device_configuration(GPU[0], [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=8192//2)])
-class InterpretableBertModel(tf.keras.Model):
+class InterpretableLongformerModel(tf.keras.Model):
+    """Class created in order to have the whole architecture with the frozen encoder, the prototype layer and the classifier at the end."""
     def __init__(self, k, list_dense_params, tokenizer_vocab_len, **kwargs):
-        super(InterpretableBertModel, self).__init__(**kwargs)
+        super(InterpretableLongformerModel, self).__init__(**kwargs)
         self.k = k
         self.list_dense_params = list_dense_params
         #self.encoder = TFRobertaModel.from_pretrained('roberta-base')
@@ -51,7 +54,7 @@ class InterpretableBertModel(tf.keras.Model):
 tokenizer = LongformerTokenizer.from_pretrained('../storage/tokenizer', max_length = 2048)
 k = 15
 list_dense_params = [(32, 'gelu'), (32, 'gelu')]#, (32, 'gelu')
-global_model = InterpretableBertModel(k=k, list_dense_params=list_dense_params, tokenizer_vocab_len = len(tokenizer))
+global_model = InterpretableLongformerModel(k=k, list_dense_params=list_dense_params, tokenizer_vocab_len = len(tokenizer))
 
 PATH = Path("../storage/treated_articles")
 
@@ -98,7 +101,7 @@ global_model.fit(data_train, epochs = 2, steps_per_epoch = 700, validation_data=
 
 global_model.save_weights('interpretablebert/model')
 global_model.evaluate(data_test, verbose = 2)
-new_model = InterpretableBertModel(k=k, list_dense_params=list_dense_params, tokenizer_vocab_len = len(tokenizer))
+new_model = InterpretableLongformerModel(k=k, list_dense_params=list_dense_params, tokenizer_vocab_len = len(tokenizer))
 new_model.compile(optimizer = AdamWeightDecay(1e-3), loss = 'binary_crossentropy', metrics = ['accuracy', tf.keras.metrics.Precision(), tf.keras.metrics.Recall()])
 new_model.load_weights('interpretablebert/model')
 new_model.evaluate(data_test, verbose = 2)

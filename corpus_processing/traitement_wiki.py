@@ -27,7 +27,8 @@ for line in tqdm(f) :
 f.close()
 g.close()
 """
-
+"""Attempt to separe articles dealing with cybersecurity or IT in general with the rest of wiki articles. 
+The problem was that the number of articles dealing with these subject in the wiki dumps was not sufficient."""
 import re 
 f = open("../storage/embedding/brut/wiki.txt", "r")
 g = open("../storage/embedding/treated/new_wiki_2.txt", 'w')

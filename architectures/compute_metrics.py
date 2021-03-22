@@ -1,5 +1,6 @@
 from sklearn.metrics import confusion_matrix, precision_recall_fscore_support, accuracy_score
 import numpy as np
+"""Script to import if we want to compute metrics with our prediction"""
 def compute_metrics(pred):
     ytrue = pred.label_ids
     preds = pred.predictions.argmax(-1)

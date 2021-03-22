@@ -3,7 +3,7 @@ import xlsxwriter
 
 import openpyxl
 wb = openpyxl.load_workbook("new_dataset_while_labelling_8.xlsx")
-
+"""This script allows to collect mentions of a link from the id of the initial tweet and stores these tweets in sheet 2."""
 with open('cles.txt', 'r') as f:
     lignes = []
     for line in f:

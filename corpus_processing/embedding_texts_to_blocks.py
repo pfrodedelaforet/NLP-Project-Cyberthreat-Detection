@@ -1,5 +1,6 @@
 import csv
 from tqdm import tqdm
+"""Splits the cybersecurity corpora into lines of 1024 words, in order to make It understandable for the Masked-Language Modelling."""
 def chunks(liste, n):
     new_list = [None]*(len(liste)//n+1)
     k = 0

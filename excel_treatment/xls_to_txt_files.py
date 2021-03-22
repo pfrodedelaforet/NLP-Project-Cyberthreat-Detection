@@ -1,9 +1,11 @@
 import openpyxl
 import csv
 from tqdm import tqdm
+"""This script allows to convert the excel sheet containing the dataset to folders relevant/irrelevant containing text files."""
 wb = openpyxl.load_workbook("../storage/dataset/new_dataset_inv_search_freq.xlsx")
 ws = wb["Sheet1"]
-for i in tqdm(range(1, 3557)):
+n_tweets = 3556
+for i in tqdm(range(1, n_tweets+1)):
     num = str(i)
     tweet_id = str(ws[f"A{i}"].value)
     print(tweet_id)

@@ -2,6 +2,7 @@ import torch
 import linecache 
 from transformers import LongformerTokenizer
 tokenizer = LongformerTokenizer.from_pretrained('../storage/tokenizer', max_length = 2048)
+"""Script used to create a class Dataset in order to train the Longformer architecture using PyTorch."""
 class Dataset_alamano(torch.utils.data.Dataset):
     'Characterizes a dataset for PyTorch'
     def __init__(self, text, label):

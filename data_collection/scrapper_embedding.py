@@ -12,6 +12,8 @@ r = requests.get(url, headers=headers)
 data = e.extract(r.text)
 # Imprimer les données
 print(json.dumps(data, indent=True))"""
+
+"""This script allows to scrap recursively the articles from news websites"""
 from selectorlib import Extractor
 import requests
 import json
@@ -20,6 +22,7 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from newsplease import NewsPlease
 import re
+#The extractor allows to provide the crawler with the information in the HTML page we want to collect, if NewsPlease doesn't do the job.
 e = Extractor.from_yaml_file('../yml_templates/text_nakedsec.yml')
 user_agent = 'projet recherche datasophia'
 headers = {'User-Agent': user_agent}
@@ -31,7 +34,7 @@ class TheFriendlyNeighbourhoodSpider(CrawlSpider):
     rules = (
         Rule(LinkExtractor(), callback='parse_item', follow=True),
     )
-    def parse_item(self, response):#adapt for each website
+    def parse_item(self, response):#this is the function telling the crawler what task to achieve when scraping a new page.
         link = response.url
         print('lien :', link) 
         article = NewsPlease.from_url(link)

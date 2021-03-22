@@ -5,7 +5,8 @@ from pathlib import Path
 from tqdm import tqdm
 from collections import Counter
 from operator import itemgetter
-
+"""Script to use in order to adapt the default vocabulary of the tokenizer to our dataset. 
+Change Roberta with Longformer if you want to do this with the Longformer"""
 PATH = Path("../storage/treated_articles")
 iterd = PATH.iterdir()
 tokenizer = RobertaTokenizer.from_pretrained('roberta-base', max_length = 512)

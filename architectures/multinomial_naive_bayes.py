@@ -8,7 +8,7 @@ import sys
 sys.path.insert(1, 'C:/Users/pfrod/OneDrive/Documents/2A mines de paris/Data x cybersec/cours_data')
 from eval import Performance, show_top10
 import numpy as np
-
+"""Implementation of the Multinomial Naive Bayes, just change "counts" to "tfidf" if you want to change the weighting."""
 
 if __name__ == '__main__':
     PATH = Path("../storage/dataset/treated_articles")

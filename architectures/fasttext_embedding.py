@@ -10,6 +10,8 @@ from sklearn.decomposition import PCA
 import numpy as np
 import logging
 from tqdm import tqdm
+"""Script used to train the FastText embedding architecture thanks to the cybersecurity corpus 
+and create FastText embeddings """
 embedding_corpus = open('../storage/cybersec_final.txt', 'r', encoding='utf-8')
 cores = multiprocessing.cpu_count()
 print(cores)

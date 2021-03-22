@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 import numpy as np
 import pandas as pd
+"""Script used to show different results related to the FastText embedding trained on the cybersecurity corpus."""
 list_words = ['information', 'vulnerabilities', 'vuln', 'attacks', 'data', 'malwapi', 'ransom', 'security', 'cve', 'malspam', 
     'code','politics', 'company', 'knight', 'kitchen', 'submarine', 'good', 'student', 'neighbor', 'pineapple']
 #df = pd.DataFrame(columns = list_words)
