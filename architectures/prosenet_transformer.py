@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split, StratifiedShuffleSplit
 import sys
 from tensorflow.keras import Model
 from tensorflow.keras.layers import Input, Dense, Flatten, Dropout
-sys.path.insert(1, '/home/pfrod/architectures/tf-ProSeNet_adapted/prosenet')
+sys.path.insert(1, '/home/pfrod/architectures/prosenet_adapted/prosenet')
 
 from prototypes_2 import Prototypes
 from projection_2 import PrototypeProjection
